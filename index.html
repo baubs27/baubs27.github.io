@@ -10,6 +10,75 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+	  #intro {
+	    padding: 40px 20px;
+	  }
+	
+	  #intro .container {
+	    max-width: 1200px;
+	    margin: 0 auto;
+	  }
+	
+	  /* Three cards next to each other. */
+	  #intro .intro-grid {
+	    display: grid;
+	    grid-template-columns: repeat(3, minmax(0, 1fr));
+	    gap: 32px;
+	    align-items: start;
+	  }
+	
+	  #intro .intro-card {
+	    min-width: 0;
+	    text-align: center;
+	  }
+	
+	  /* The box surrounding each icon. */
+	  #intro .featured-icon {
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    width: 96px;
+	    height: 96px;
+	    margin: 0 auto 24px;
+	    border-radius: 16px;
+	    background: #d52349;
+	    color: white;
+	  }
+	
+	  /* The actual icon size. */
+	  #intro .featured-icon svg {
+	    display: block;
+	    width: 56px;
+	    height: 56px;
+	    flex-shrink: 0;
+	    fill: none;
+	    stroke: currentColor;
+	    stroke-width: 2.5;
+	    stroke-linecap: round;
+	    stroke-linejoin: round;
+	  }
+	
+	  #intro .intro-card:nth-child(2) .featured-icon {
+	    background: #252122;
+	  }
+	
+	  #intro .intro-card:nth-child(3) .featured-icon {
+	    background: #827a7c;
+	  }
+	
+	  #intro .skills-note {
+	    margin-top: 32px;
+	    text-align: center;
+	  }
+	
+	  /* Stack vertically on phones. */
+	  @media screen and (max-width: 736px) {
+	    #intro .intro-grid {
+	      grid-template-columns: 1fr;
+	    }
+	  }
+	</style>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
